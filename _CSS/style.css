@@ -1,5 +1,11 @@
 
 #navbarNav{
-    justify-content: space-around
+    justify-content: space-around;
+    font-size: 25px;       
+}
 
+ul, li, a #navbar-nav{
+   
+    font-family: sans-serif;
+    justify-content: space-around;
 }
