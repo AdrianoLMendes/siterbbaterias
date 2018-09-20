@@ -1,11 +1,20 @@
 
-#navbarNav{
+.navbarNav{
     justify-content: space-around;
-    font-size: 25px;       
+    font-size: 20px;       
 }
 
-ul, li, a #navbar-nav{
+ul, li, a .navbar-nav{
    
     font-family: sans-serif;
     justify-content: space-around;
 }
+
+.card{
+    margin: 40px 0;
+}
+
+.card-deck{
+    padding-bottom: 40px;
+}
+
