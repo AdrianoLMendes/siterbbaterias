@@ -18,3 +18,9 @@ ul, li, a .navbar-nav{
     padding-bottom: 40px;
 }
 
+
+.grid1{
+    display: grid;
+    
+}
+
