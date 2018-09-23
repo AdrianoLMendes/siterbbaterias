@@ -29,6 +29,6 @@
             return false;
         }    
 
-        document.getElementsByClassName('modal-footer').addEveentLitsener('Enviar', function()
+        
     }
 
