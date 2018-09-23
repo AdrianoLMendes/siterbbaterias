@@ -11,11 +11,15 @@ ul, li, a .navbar-nav{
 }
 
 .card{
-    margin: 40px 0;
+    margin: 40px;
 }
 
 .card-deck{
     padding-bottom: 40px;
+}
+
+.card-body{
+    padding-bottom: 1px;
 }
 
 
