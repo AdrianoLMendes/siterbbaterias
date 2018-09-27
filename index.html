@@ -44,81 +44,128 @@
               <ul class="nav navbar-nav nav-flex-icons ml-auto">
                 <li class="nav-item">
                     <a class="nav-link " data-toggle="modal" data-target="#exampleModal"><i class="fa fa-envelope"></i><span>Contato</span></a>     
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Envie seu Contato</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <form name="form_contato" method="GET">
-                                              <div class="modal-body">
-                                                  <div class="form-group">
-                                                    <label class="col-form-label">Nome</label>
-                                                    <input type="text" class="form-control" name="nome">
-                                                  </div>
-                                                  <div class="form-group">
-                                                    <label class="col-form-label">Telefone</label>
-                                                    <input type="tel" class="form-control" name="telefone">
-                                                  </div>
-                                                  <div class="form-group">
-                                                    <label class="col-form-label">E-mail</label>
-                                                    <input type="email" class="form-control" name="email">
-                                                  </div>
-                                                  <div class="form-group">
-                                                    <label class="col-form-label">Mensagem</label>
-                                                    <textarea class="form-control" name="mensagem"></textarea>
-                                                  </div>
-                                                </div>
-                                                  <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
-                                                    <button type="submit" class="btn btn-success" onclick ="return validar_form_contato()">Enviar</button>
-                                                  </div>
-                                            </form>
-                                        </div>
-                                      </div>
-                                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-comments-o"></i> <span>Suporte</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-user"></i><span>Cadastro</span></a>
-                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              
-                              <form class="row" method="GET">
-                                    <div class="col-12 col-sm-6 col-md-8">
-                                      <label class="col-form-label">Nome</label>
-                                      <input type="text" class="form-control" name="nome" placeholder="Seu Nome">
-                                    </div>
-
-                                    <div class="col-6 col-md-4">
-                                      <label class="col-form-label">Telefone</label>
-                                      <input type="tel" class="form-control" name="telefone">
-                                    </div>
-
-                                    <div class="col-12 col-sm-6 col-md-8">
-                                      <label class="col-form-label">Endereço</label>
-                                      <input type="text" class="form-control" name="endereco" placeholder="Seu Nome">
-                                    </div>
-
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                      <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                    </div>
+                              <h5 class="modal-title" id="exampleModalLabel">Envie seu Contato</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <form name="form_contato" method="GET">
+                              <div class="modal-body">
+                                  <div class="form-group">
+                                    <label class="col-form-label">Nome</label>
+                                    <input type="text" class="form-control" name="nome">
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-form-label">Telefone</label>
+                                    <input type="tel" class="form-control" name="telefone">
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-form-label">E-mail</label>
+                                    <input type="email" class="form-control" name="email">
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-form-label">Mensagem</label>
+                                    <textarea class="form-control" name="mensagem"></textarea>
+                                  </div>
+                                </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" id="btn_cance" data-dismiss="modal">Sair</button>
+                                    <button type="submit" class="btn btn-primary" id="btn_sub" onclick ="return validar_form_contato()">Enviar</button>
+                                  </div>
                               </form>
                           </div>
                         </div>
                       </div>
-                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
+                    <a class="nav-link" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-user"></i><span>Cadastro</span></a> 
+                      <!-- Modal Largo - formulario de cadastro -->
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-dody">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 25px">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h5 class="modal-title_cad" id="exampleModalLabel">Cadastre-se</h5>
+                          </div> 
+                            <div class="div-form">
+                              <form name="form_cad" method="GET">
+                                <div class="container">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <input type="text" class="form-control" name="nome_cad" placeholder="Primeiro nome">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <input type="text" class="form-control" name="ult_cad" placeholder="Último nome">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputEmail4">Email</label>
+                                          <input type="email" class="form-control" name="email_cad" id="inputEmail4" placeholder="Digite seu e-mail">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                          <label for="inputPassword4">Senha</label>
+                                          <input type="password" name="senha_cad" class="form-control" id="inputPassword4" placeholder="******">
+                                          <small id="passwordHelpBlock" class="form-text text-muted">
+                                              Deve ter 8 a 20 caracteres.
+                                          </small>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="inputPassword4">Confirmar Senha</label>
+                                            <input type="password" name="conf_senha_cad" class="form-control" id="inputPassword4" placeholder="******">
+                                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                                Digite novamente sua senha.
+                                            </small>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="inputAddress">Endereço</label>
+                                        <input type="text" name="end_cad" class="form-control" id="inputAddress">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="inputAddress2">Complemento</label>
+                                        <input type="text" class="form-control" name="compl_end_cad" id="inputAddress2">
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputCity">Cidade</label>
+                                          <input type="text" class="form-control" name="cid_cad" id="inputCity">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                          <label for="inputState">Estado</label>
+                                          <select id="inputState" class="form-control" name="esta_cad">
+                                            <option selected></option>
+                                            <option>Goiás (GO)</option>
+                                            <option>Maranhão (MA)</option>
+                                            <option>Mato Grosso (MT)</option>
+                                            <option>Pará (PA)</option>
+                                            <option>Tocantins (TO)</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                          <label for="inputZip">Cep</label>
+                                          <input type="text" class="form-control" name="cep_cad" id="inputZip">
+                                        </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-lg" id="btn_cance" data-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary btn-lg" id="btn_sub" onclick ="return validar_form_cad()" id="cad_form">Cadastrar</button>
+                                      </div>
+                                </div>
+                              </form>
+                            </div>                            
+                               
+                        </div>
+                      </div>
+                    </div>
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
                 </li>
             </ul>
           </div>
@@ -141,7 +188,7 @@
           <img class="d-block w-100" src="./_image/logo-moura.jpg" alt="Second slide" height="450px">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./_image/batsbateria.jpg" alt="Third slide" height="450px">
+          <img class="d-block w-100" src="./_image/bateria-america.jpg" alt="Third slide" height="450px">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -162,7 +209,7 @@
           <div class="card">
             <img class="card-img-top" src="./_image/logomarcas/logo bosch.jpeg" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">um breve texto </p>
+              <p class="card-text">um breve texto sobre a marca</p>
             </div>
           </div>
           
